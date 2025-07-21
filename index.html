@@ -12,7 +12,13 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-4N6GVVDH22');
-    
+   // Resume download tracking
+document.getElementById('resume-download').addEventListener('click', () => {
+  gtag('event', 'download', {
+    'event_category': 'resume',
+    'event_label': 'PDF_Download'
+  });
+}); 
 </script>
     
     <style>
