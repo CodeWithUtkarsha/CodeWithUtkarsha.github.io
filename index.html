@@ -1,26 +1,40 @@
-make changes in this so that the resume is downloaded on clicking
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | B.Tech CSBS Portfolio</title>
-    
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4N6GVVDH22"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4N6GVVDH22');
-   // Resume download tracking
-document.getElementById('resume-download').addEventListener('click', () => {
-  gtag('event', 'download', {
-    'event_category': 'resume',
-    'event_label': 'PDF_Download'
-  });
-}); 
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utkarsha Salve | B.Tech CSBS Portfolio</title>
+
+  <!-- ✅ SEO -->
+  <meta name="description" content="Utkarsha Salve | B.Tech CSBS student & full-stack developer skilled in React, Java, Python, and web technologies. View portfolio, projects, resume.">
+  <meta name="keywords" content="Utkarsha Salve, Portfolio, B.Tech CSBS, Full Stack Developer, Resume, Projects, React, Python, Java, GitHub">
+  <meta name="author" content="Utkarsha Salve" />
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- ✅ Open Graph -->
+  <meta property="og:title" content="Utkarsha Salve | Portfolio" />
+  <meta property="og:description" content="View my developer portfolio, projects, resume and connect with me!" />
+  <meta property="og:image" content="https://codewithutkarsha.github.io/assets/preview.png" />
+  <meta property="og:url" content="https://codewithutkarsha.github.io" />
+  <meta property="og:type" content="website" />
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Utkarsha Salve | Portfolio" />
+  <meta name="twitter:description" content="Explore my projects, skills, resume and let's build something great together." />
+  <meta name="twitter:image" content="https://codewithutkarsha.github.io/assets/preview.png" />
+
+  <!-- ✅ Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N6GVVDH22"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4N6GVVDH22');
+  </script>
     
     <style>
         :root {
@@ -418,37 +432,40 @@ document.getElementById('resume-download').addEventListener('click', () => {
         </div>
     </footer>
     
-    <!-- JavaScript -->
-    <script>
-        // Google Analytics event tracking
-        document.getElementById('resume-download').addEventListener('click', function() {
-            gtag('event', 'download', {
-                'event_category': 'resume',
-                'event_label': 'PDF_Download'
-            });
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const resumeLink = document.getElementById('resume-download');
+    if (resumeLink) {
+      resumeLink.addEventListener('click', function () {
+        gtag('event', 'download', {
+          'event_category': 'resume',
+          'event_label': 'PDF_Download'
         });
-        
-        document.querySelectorAll('.project-link').forEach(link => {
-            link.addEventListener('click', function() {
-                gtag('event', 'view_project', {
-                    'event_category': 'engagement',
-                    'event_label': this.getAttribute('data-project-name')
-                });
-            });
+      });
+    }
+
+    document.querySelectorAll('.project-link').forEach(link => {
+      link.addEventListener('click', function () {
+        gtag('event', 'view_project', {
+          'event_category': 'engagement',
+          'event_label': this.getAttribute('data-project-name')
         });
-        
-        // Smooth scrolling for navigation
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId !== '#') {
-                    document.querySelector(targetId).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+      });
+    });
+
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId !== '#') {
+          document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
