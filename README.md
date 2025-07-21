@@ -1,5 +1,3 @@
-# CodeWithUtkarsha.github.io
-Portfolio Website - Built with HTML/CSS/JS | CodeWithUtkarsha.github.io  
 # Utkarsha's Portfolio
 
 🚀 Professional portfolio | B.Tech CSBS @[University]  
