@@ -6,7 +6,7 @@
   <title>Utkarsha Salve | B.Tech CSBS Portfolio</title>
 
   <!-- ✅ SEO -->
-  <meta name="description" content="Utkarsha Salve | B.Tech CSBS student & full-stack developer skilled in React, Java, Python, and web technologies. View portfolio, projects, resume.">
+  <meta name="description" content="Utkarsha Salve | B.Tech CSBS student & Full-Stack developer skilled in React, Java, Python, and web technologies. View portfolio, projects, resume.">
   <meta name="keywords" content="Utkarsha Salve, Portfolio, B.Tech CSBS, Full Stack Developer, Resume, Projects, React, Python, Java, GitHub">
   <meta name="author" content="Utkarsha Salve" />
 
@@ -57,7 +57,34 @@
             color: var(--dark);
             background-color: white;
         }
-        
+        /* Profile Picture Styles */
+.profile-pic-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.profile-pic-container:hover .profile-pic {
+    transform: scale(1.03);
+}
         /* Navigation */
         nav {
             background-color: var(--primary);
@@ -67,7 +94,12 @@
             z-index: 100;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    .profile-pic-container {
+        width: 180px;
+        height: 180px;
+    }
+}
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -321,6 +353,17 @@
     <!-- Header -->
     <header>
         <div class="header-content">
+                  <div class="profile-pic-container">
+            <img src="assets/profile.jpg" 
+                 alt="Utkarsha Salve Professional Photo" 
+                 class="profile-pic"
+                 width="150"
+                 height="150"
+                 loading="lazy">
+                <link rel="preload" href="assets/profile.jpg" as="image">
+        </div>
+        <h1>Utkarsha Salve</h1>
+        <p class="subtitle">B.Tech Computer Science & Business Systems | GITAM University 2022-2026</p>
             <h1>Utkarsha Salve</h1>
             <p class="subtitle">B.Tech Computer Science & Business Systems | [University] 2025</p>
             <div class="contact-bar">
