@@ -251,7 +251,20 @@
             max-width: 800px;
             margin: 0 auto;
         }
-        
+        /* Keep your existing styles */
+.university {
+    color: var(--primary); /* Your portfolio's blue */
+    font-weight: 500;
+}
+
+.graduation-cap {
+    font-size: 1.1rem;
+    display: inline-flex;
+    transition: transform 0.3s ease;
+}
+.graduation-cap:hover {
+    transform: rotate(15deg) scale(1.2);
+}
         .footer-links {
             display: flex;
             justify-content: center;
@@ -430,7 +443,11 @@
                 <a href="https://linkedin.com/in/utkarsha-salve-253b95259/" target="_blank">LinkedIn</a>
                 <a href="https://github.com/CodeWithUtkarsha" target="_blank">GitHub</a>
             </div>
-            <p class="copyright">© 2025 Utkarsha Salve. All rights reserved.</p>
+            <p class="copyright">
+            <span class="graduation-cap">🎓</span>
+            © 2022-2026 Utkarsha Salve | 
+            <span class="university">B.Tech CSBS @ GITAM University</span>
+        </p>
         </div>
     </footer>
     
