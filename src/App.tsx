@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'projects', 'skills', 'internships', 'contact'];
+      const sections = ['about', 'projects', 'skills', 'internships', 'resume', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -71,6 +71,7 @@ function App() {
                   { id: 'projects', label: 'Projects', icon: Code },
                   { id: 'skills', label: 'Skills', icon: Award },
                   { id: 'internships', label: 'Experience', icon: Briefcase },
+                  { id: 'resume', label: 'Resume', icon: Download },
                   { id: 'contact', label: 'Contact', icon: Mail }
                 ].map(({ id, label, icon: Icon }) => (
                   <button
@@ -86,13 +87,6 @@ function App() {
                     {label}
                   </button>
                 ))}
-                <button
-                  onClick={handleResumeClick}
-                  className="ml-4 bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors duration-200 flex items-center gap-1"
-                >
-                  <Download size={16} />
-                  Resume
-                </button>
               </div>
             </div>
 
@@ -116,6 +110,7 @@ function App() {
                   { id: 'projects', label: 'Projects', icon: Code },
                   { id: 'skills', label: 'Skills', icon: Award },
                   { id: 'internships', label: 'Experience', icon: Briefcase },
+                  { id: 'resume', label: 'Resume', icon: Download },
                   { id: 'contact', label: 'Contact', icon: Mail }
                 ].map(({ id, label, icon: Icon }) => (
                   <button
@@ -131,13 +126,6 @@ function App() {
                     {label}
                   </button>
                 ))}
-                <button
-                  onClick={handleResumeClick}
-                  className="w-full text-left mt-4 bg-blue-700 text-white px-3 py-2 rounded-md text-base font-medium hover:bg-blue-800 transition-colors duration-200 flex items-center gap-2"
-                >
-                  <Download size={18} />
-                  Resume
-                </button>
               </div>
             </div>
           )}
@@ -263,40 +251,59 @@ function App() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Technical Skills</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              A comprehensive overview of my technical expertise and the tools I work with.
+              Technologies and tools I'm proficient in, organized by expertise level and category.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                category: "Frontend",
-                skills: ["React", "Vue.js", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS"]
-              },
-              {
-                category: "Backend",
-                skills: ["Node.js", "Python", "Django", "Express.js", "REST APIs", "GraphQL"]
-              },
-              {
-                category: "Database",
-                skills: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Redis"]
-              },
-              {
-                category: "Tools & Others",
-                skills: ["Git", "Docker", "AWS", "Linux", "Agile", "Testing"]
-              }
-            ].map((skillGroup, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-xl font-bold text-slate-800 mb-4 text-center">{skillGroup.category}</h3>
-                <div className="space-y-2">
-                  {skillGroup.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="bg-blue-50 text-blue-700 text-center py-2 px-3 rounded-lg text-sm font-medium">
-                      {skill}
-                    </div>
-                  ))}
+          {/* Programming Languages */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">Programming Languages</h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {["JavaScript", "Python", "TypeScript", "Java", "C++", "SQL"].map((skill, index) => (
+                <div key={index} className="group relative">
+                  <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    {skill}
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          {/* Frontend Technologies */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">Frontend Technologies</h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {["React", "Vue.js", "Angular", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "Sass"].map((skill, index) => (
+                <div key={index} className="bg-green-100 text-green-800 px-4 py-2 rounded-lg font-medium hover:bg-green-200 transition-colors duration-200 border border-green-200">
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Backend & Database */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">Backend & Database</h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {["Node.js", "Express.js", "Django", "Flask", "MongoDB", "PostgreSQL", "MySQL", "Firebase", "REST APIs", "GraphQL"].map((skill, index) => (
+                <div key={index} className="bg-purple-100 text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-purple-200 transition-colors duration-200 border border-purple-200">
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tools & Technologies */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">Tools & Technologies</h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {["Git", "Docker", "AWS", "Linux", "VS Code", "Figma", "Postman", "Jest", "Webpack", "Vite"].map((skill, index) => (
+                <div key={index} className="bg-orange-100 text-orange-800 px-4 py-2 rounded-lg font-medium hover:bg-orange-200 transition-colors duration-200 border border-orange-200">
+                  {skill}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -346,6 +353,44 @@ function App() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Resume Section */}
+      <section id="resume" className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <div className="mb-8">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Download size={32} className="text-white" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">My Resume</h2>
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                Take a detailed look at my professional journey, technical expertise, and achievements. 
+                Download or view my complete resume to learn more about my qualifications.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <button
+                onClick={handleResumeClick}
+                className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3"
+              >
+                <Download size={20} className="group-hover:animate-bounce" />
+                View Resume
+              </button>
+              <div className="text-slate-500 text-sm">
+                <span className="hidden sm:inline">•</span>
+                <span className="sm:ml-2">Updated January 2025</span>
+              </div>
+            </div>
+            
+            <div className="mt-8 pt-6 border-t border-slate-200">
+              <p className="text-slate-500 text-sm">
+                💡 <strong>Quick Tip:</strong> My resume includes detailed project descriptions, technical achievements, and contact information.
+              </p>
+            </div>
           </div>
         </div>
       </section>
