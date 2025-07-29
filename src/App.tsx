@@ -4,6 +4,7 @@ import { Menu, X, ExternalLink, Download, Mail, Github, Linkedin, Code, Briefcas
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('about');
+  const [profileImage, setProfileImage] = useState('https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +35,17 @@ function App() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false);
+  };
+
+  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setProfileImage(e.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   const handleResumeClick = () => {
@@ -136,8 +148,29 @@ function App() {
       <section id="about" className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="w-32 h-32 bg-gradient-to-br from-blue-700 to-blue-800 rounded-full mx-auto mb-8 flex items-center justify-center">
-              <User size={48} className="text-white" />
+            <div className="w-40 h-40 mx-auto mb-8 relative group">
+              <div className="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
+                <img 
+                  src={profileImage}
+                  alt="John Doe - Professional Profile" 
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <input 
+                  type="file" 
+                  accept="image/*" 
+                  className="hidden" 
+                  id="profile-upload"
+                  onChange={handleImageUpload}
+                />
+                <label 
+                  htmlFor="profile-upload" 
+                  className="absolute inset-0 cursor-pointer bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 rounded-full flex items-center justify-center"
+                >
+                  <span className="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium text-center px-2">
+                    Click to update photo
+                  </span>
+                </label>
+              </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6">
               Hi, I'm <span className="text-blue-700">John Doe</span>
@@ -327,37 +360,57 @@ function App() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+          <div className="flex justify-center items-center gap-8 mb-12">
             <a 
               href="mailto:john.doe@email.com" 
-              className="bg-slate-700 p-6 rounded-xl hover:bg-slate-600 transition-colors duration-200 group"
+              className="group flex flex-col items-center p-6 bg-slate-700 rounded-xl hover:bg-slate-600 transition-all duration-300 hover:scale-110 hover:shadow-2xl min-w-[120px]"
             >
-              <Mail size={48} className="mx-auto mb-4 text-blue-400 group-hover:text-blue-300" />
-              <h3 className="text-xl font-bold mb-2">Email</h3>
-              <p className="text-slate-300">john.doe@email.com</p>
+              <div className="w-12 h-12 mb-3 bg-red-500 rounded-full flex items-center justify-center group-hover:bg-red-400 transition-colors duration-300">
+                <Mail size={20} className="text-white" />
+              </div>
+              <h3 className="text-sm font-semibold text-white group-hover:text-red-300 transition-colors duration-300">Gmail</h3>
             </a>
             
             <a 
               href="https://linkedin.com/in/johndoe" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-slate-700 p-6 rounded-xl hover:bg-slate-600 transition-colors duration-200 group"
+              className="group flex flex-col items-center p-6 bg-slate-700 rounded-xl hover:bg-slate-600 transition-all duration-300 hover:scale-110 hover:shadow-2xl min-w-[120px]"
             >
-              <Linkedin size={48} className="mx-auto mb-4 text-blue-400 group-hover:text-blue-300" />
-              <h3 className="text-xl font-bold mb-2">LinkedIn</h3>
-              <p className="text-slate-300">linkedin.com/in/johndoe</p>
+              <div className="w-12 h-12 mb-3 bg-blue-600 rounded-full flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
+                <Linkedin size={20} className="text-white" />
+              </div>
+              <h3 className="text-sm font-semibold text-white group-hover:text-blue-300 transition-colors duration-300">LinkedIn</h3>
             </a>
             
             <a 
               href="https://github.com/johndoe" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-slate-700 p-6 rounded-xl hover:bg-slate-600 transition-colors duration-200 group"
+              className="group flex flex-col items-center p-6 bg-slate-700 rounded-xl hover:bg-slate-600 transition-all duration-300 hover:scale-110 hover:shadow-2xl min-w-[120px]"
             >
-              <Github size={48} className="mx-auto mb-4 text-blue-400 group-hover:text-blue-300" />
-              <h3 className="text-xl font-bold mb-2">GitHub</h3>
-              <p className="text-slate-300">github.com/johndoe</p>
+              <div className="w-12 h-12 mb-3 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gray-700 transition-colors duration-300">
+                <Github size={20} className="text-white" />
+              </div>
+              <h3 className="text-sm font-semibold text-white group-hover:text-gray-300 transition-colors duration-300">GitHub</h3>
             </a>
+          </div>
+          
+          <div className="text-center">
+            <div className="inline-flex items-center gap-4 bg-slate-700 px-6 py-3 rounded-full">
+              <span className="text-slate-300 text-sm">Connect with me:</span>
+              <div className="flex gap-3">
+                <a href="mailto:john.doe@email.com" className="text-slate-400 hover:text-red-400 transition-colors duration-200">
+                  <Mail size={18} />
+                </a>
+                <a href="https://linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">
+                  <Linkedin size={18} />
+                </a>
+                <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-gray-300 transition-colors duration-200">
+                  <Github size={18} />
+                </a>
+              </div>
+            </div>
           </div>
           
           <div className="text-center mt-12">
