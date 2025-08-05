@@ -13,6 +13,6 @@ This is my personal portfolio website showcasing my projects, skills, and experi
 - Resume download  
 
 ## 🚀 Setup
-
+```bash
 npm install
 npm run dev
