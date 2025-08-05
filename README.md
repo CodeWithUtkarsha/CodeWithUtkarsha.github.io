@@ -4,6 +4,7 @@ This is my personal portfolio website showcasing my projects, skills, and experi
 
 🔗 Live: [bolty-newp.vercel.app](https://bolty-newp.vercel.app)  
 🎯 Built with: Vite + React + TypeScript + TailwindCSS  
+📦 Deployed on: Vercel
 
 ## 🛠 Features
 
@@ -11,3 +12,7 @@ This is my personal portfolio website showcasing my projects, skills, and experi
 - Project showcase  
 - Resume download  
 
+## 🚀 Setup
+
+npm install
+npm run dev
