@@ -394,15 +394,17 @@ function App() {
           </div>
           
           <div className="flex justify-center items-center gap-8 mb-12">
-            <a 
-              href="mailto:utkarsha.v.salve@gmail.com" 
-              className="group flex flex-col items-center p-6 bg-slate-700 rounded-xl hover:bg-slate-600 transition-all duration-300 hover:scale-110 hover:shadow-2xl min-w-[120px]"
-            >
-              <div className="w-12 h-12 mb-3 bg-red-500 rounded-full flex items-center justify-center group-hover:bg-red-400 transition-colors duration-300">
-                <Mail size={20} className="text-white" />
-              </div>
-              <h3 className="text-sm font-semibold text-white group-hover:text-red-300 transition-colors duration-300">Gmail</h3>
-            </a>
+           <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=utkarsha.v.salve@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group flex flex-col items-center p-6 bg-slate-700 rounded-xl hover:bg-slate-600 transition-all duration-300 hover:scale-110 hover:shadow-2xl min-w-[120px]"
+>
+  <div className="w-12 h-12 mb-3 bg-red-500 rounded-full flex items-center justify-center group-hover:bg-red-400 transition-colors duration-300">
+    <Mail size={20} className="text-white" />
+  </div>
+  <h3 className="text-sm font-semibold text-white group-hover:text-red-300 transition-colors duration-300">Gmail</h3>
+</a>
             
             <a 
               href="https://www.linkedin.com/in/utkarsha-salve-253b95259/" 
