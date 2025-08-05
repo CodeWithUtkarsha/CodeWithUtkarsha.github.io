@@ -220,7 +220,7 @@ function App() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Technical Skills</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Technologies and tools I'm proficient in, organized by expertise level and category.
+              Technologies and tools I'm proficient in.
             </p>
           </div>
           
@@ -228,7 +228,7 @@ function App() {
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">Programming Languages</h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {["JavaScript", "Python", "TypeScript", "Java", "C++", "SQL"].map((skill, index) => (
+              {["JavaScript", "Python", "Java", "C++", "SQL"].map((skill, index) => (
                 <div key={index} className="group relative">
                   <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                     {skill}
@@ -243,7 +243,7 @@ function App() {
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">Frontend Technologies</h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {["React", "Vue.js", "Angular", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "Sass"].map((skill, index) => (
+              {["React.js", "HTML", "CSS", "Javascript","Tailwind CSS"].map((skill, index) => (
                 <div key={index} className="bg-green-100 text-green-800 px-4 py-2 rounded-lg font-medium hover:bg-green-200 transition-colors duration-200 border border-green-200">
                   {skill}
                 </div>
@@ -255,7 +255,7 @@ function App() {
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">Backend & Database</h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {["Node.js", "Express.js", "Django", "Flask", "MongoDB", "PostgreSQL", "MySQL", "Firebase", "REST APIs", "GraphQL"].map((skill, index) => (
+              {["Node.js", "Express.js",  "MongoDB", "MySQL", "Firebase", "REST APIs"].map((skill, index) => (
                 <div key={index} className="bg-purple-100 text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-purple-200 transition-colors duration-200 border border-purple-200">
                   {skill}
                 </div>
@@ -267,7 +267,7 @@ function App() {
           <div className="mb-8">
             <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">Tools & Technologies</h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {["Git", "Docker", "AWS", "Linux", "VS Code", "Figma", "Postman", "Jest", "Webpack", "Vite"].map((skill, index) => (
+              {["Git", "AWS", "Linux", "VS Code", "Figma", "Postman", "Jest", "Webpack", "Vite"].map((skill, index) => (
                 <div key={index} className="bg-orange-100 text-orange-800 px-4 py-2 rounded-lg font-medium hover:bg-orange-200 transition-colors duration-200 border border-orange-200">
                   {skill}
                 </div>
@@ -290,19 +290,40 @@ function App() {
           <div className="space-y-8">
             {[
               {
-                company: "Tech Innovations Inc.",
-                position: "Frontend Developer Intern",
-                duration: "Jun 2024 - Aug 2024",
-                description: "Developed responsive web components using React and TypeScript. Collaborated with the design team to implement user interfaces and improved application performance by 25%.",
-                achievements: ["Built 15+ reusable components", "Optimized loading times", "Mentored junior interns"]
-              },
+  company: "SmartBridge & AICTE",
+  position: "Salesforce Developer Intern",
+  duration: "May 2025 – Jul 2025",
+  description: "Participated in a virtual internship focused on CRM development using Salesforce tools. Completed live bootcamps, Trailhead modules, and hands-on projects to enhance business process automation.",
+  achievements: [
+    "Earned multiple Salesforce Superbadges",
+    "Improved operational workflows by 10–20%",
+    "Built real-world CRM applications"
+  ]
+}
+,
               {
-                company: "StartupXYZ",
-                position: "Full Stack Developer Intern",
-                duration: "Jan 2024 - May 2024",
-                description: "Worked on both frontend and backend development using MERN stack. Implemented new features and fixed critical bugs in the production environment.",
-                achievements: ["Deployed 5 major features", "Reduced bug reports by 30%", "Implemented CI/CD pipeline"]
-              }
+  company: "AICTE-Edu Skills",
+  position: "AWS Data Engineering Intern",
+  duration: "Apr 2025 – Jun 2025",
+  description: "Worked on cloud data workflows and architecture optimization using AWS tools. Focused on enhancing storage performance and efficient querying for large datasets.",
+  achievements: [
+    "Increased query performance by 30%",
+    "Streamlined cloud storage architecture",
+    "Completed AWS Labs & virtual training modules"
+  ]
+},
+      {
+  company: "AICTE-Edu Skills",
+  position: "Android Developer Intern",
+  duration: "Jan 2025 – Mar 2025",
+  description: "Developed Android applications using Kotlin and Android Studio. Focused on intuitive UI/UX, integrated APIs, and performance optimizations across multiple devices.",
+  achievements: [
+    "Built 3+ mobile app prototypes",
+    "Integrated REST APIs for dynamic data",
+    "Enhanced UI performance and responsiveness"
+  ]
+}
+
             ].map((experience, index) => (
               <div key={index} className="bg-slate-50 rounded-xl p-6 lg:p-8">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
