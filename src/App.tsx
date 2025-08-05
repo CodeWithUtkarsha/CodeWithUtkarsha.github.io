@@ -124,7 +124,7 @@ function App() {
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
                 <img 
                   src={profileImage}
-                  alt="John Doe - Professional Profile" 
+                  alt="Utkarsha Salve - Professional Profile" 
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
