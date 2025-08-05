@@ -36,10 +36,6 @@ function App() {
     setIsMenuOpen(false);
   };
 
-  const handleResumeClick = () => {
-    window.open('#resume', '_blank');
-  };
-
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Navigation */}
@@ -166,26 +162,26 @@ function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-  title: "Campus Resolve Portal (CRP)",
-  description: "AI-powered grievance redressal platform built with MERN stack. Enables students to submit complaints via text, voice, or video with real-time tracking and AI-driven spam filtering.",
-  tech: ["MERN Stack","HTML","CSS","JAVASCRIPT"],
-  github: "https://github.com/CodeWithUtkarsha/Campus-Resolve-Portal-CRP-.git",
-  demo: "https://campus-resolve-portal-af34wp151-newp.vercel.app/"
-},
+                title: "Campus Resolve Portal (CRP)",
+                description: "AI-powered grievance redressal platform built with MERN stack. Enables students to submit complaints via text, voice, or video with real-time tracking and AI-driven spam filtering.",
+                tech: ["MERN Stack","HTML","CSS","JAVASCRIPT"],
+                github: "https://github.com/CodeWithUtkarsha/Campus-Resolve-Portal-CRP-.git",
+                demo: "https://campus-resolve-portal-af34wp151-newp.vercel.app/"
+              },
               {
-  title: "TradeTrack - Trading Journal UI",
-  description: "A performance-driven React UI inspired by TradeZella, designed to log trades, visualize analytics like P&L and win rates, and track trading strategy effectiveness with clean, modular components.",
-  tech: ["MERN Stack","HTML","CSS","JAVASCRIPT"],
-  github: "https://github.com/CodeWithUtkarsha/TradeTrack",
-  demo: "#"
-},
+                title: "TradeTrack - Trading Journal UI",
+                description: "A performance-driven React UI inspired by TradeZella, designed to log trades, visualize analytics like P&L and win rates, and track trading strategy effectiveness with clean, modular components.",
+                tech: ["MERN Stack","HTML","CSS","JAVASCRIPT"],
+                github: "https://github.com/CodeWithUtkarsha/TradeTrack",
+                demo: "#"
+              },
               {
-  title: "BINGE-IT - Movie Ticket Booking System",
-  description: "A frontend web application for online movie ticket booking with real-time seat selection, payment interface mockup, and user-friendly navigation.",
-  tech: ["HTML", "CSS", "JavaScript"],
-  github: "https://github.com/CodeWithUtkarsha/BINGE-IT",
-  demo: "https://campus-resolve-portal-af34wp151-newp.vercel.app"
-}
+                title: "BINGE-IT - Movie Ticket Booking System",
+                description: "A frontend web application for online movie ticket booking with real-time seat selection, payment interface mockup, and user-friendly navigation.",
+                tech: ["HTML", "CSS", "JavaScript"],
+                github: "https://github.com/CodeWithUtkarsha/BINGE-IT",
+                demo: "https://campus-resolve-portal-af34wp151-newp.vercel.app"
+              }
 
             ].map((project, index) => (
               <div key={index} className="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
@@ -290,39 +286,38 @@ function App() {
           <div className="space-y-8">
             {[
               {
-  company: "SmartBridge & AICTE",
-  position: "Salesforce Developer Intern",
-  duration: "May 2025 – Jul 2025",
-  description: "Participated in a virtual internship focused on CRM development using Salesforce tools. Completed live bootcamps, Trailhead modules, and hands-on projects to enhance business process automation.",
-  achievements: [
-    "Earned multiple Salesforce Superbadges",
-    "Improved operational workflows by 10–20%",
-    "Built real-world CRM applications"
-  ]
-}
-,
+                company: "SmartBridge & AICTE",
+                position: "Salesforce Developer Intern",
+                duration: "May 2025 – Jul 2025",
+                description: "Participated in a virtual internship focused on CRM development using Salesforce tools. Completed live bootcamps, Trailhead modules, and hands-on projects to enhance business process automation.",
+                achievements: [
+                  "Earned multiple Salesforce Superbadges",
+                  "Improved operational workflows by 10–20%",
+                  "Built real-world CRM applications"
+                ]
+              },
               {
-  company: "AICTE-Edu Skills",
-  position: "AWS Data Engineering Intern",
-  duration: "Apr 2025 – Jun 2025",
-  description: "Worked on cloud data workflows and architecture optimization using AWS tools. Focused on enhancing storage performance and efficient querying for large datasets.",
-  achievements: [
-    "Increased query performance by 30%",
-    "Streamlined cloud storage architecture",
-    "Completed AWS Labs & virtual training modules"
-  ]
-},
-      {
-  company: "AICTE-Edu Skills",
-  position: "Android Developer Intern",
-  duration: "Jan 2025 – Mar 2025",
-  description: "Developed Android applications using Kotlin and Android Studio. Focused on intuitive UI/UX, integrated APIs, and performance optimizations across multiple devices.",
-  achievements: [
-    "Built 3+ mobile app prototypes",
-    "Integrated REST APIs for dynamic data",
-    "Enhanced UI performance and responsiveness"
-  ]
-}
+                company: "AICTE-Edu Skills",
+                position: "AWS Data Engineering Intern",
+                duration: "Apr 2025 – Jun 2025",
+                description: "Worked on cloud data workflows and architecture optimization using AWS tools. Focused on enhancing storage performance and efficient querying for large datasets.",
+                achievements: [
+                  "Increased query performance by 30%",
+                  "Streamlined cloud storage architecture",
+                  "Completed AWS Labs & virtual training modules"
+                ]
+              },
+              {
+                company: "AICTE-Edu Skills",
+                position: "Android Developer Intern",
+                duration: "Jan 2025 – Mar 2025",
+                description: "Developed Android applications using Kotlin and Android Studio. Focused on intuitive UI/UX, integrated APIs, and performance optimizations across multiple devices.",
+                achievements: [
+                  "Built 3+ mobile app prototypes",
+                  "Integrated REST APIs for dynamic data",
+                  "Enhanced UI performance and responsiveness"
+                ]
+              }
 
             ].map((experience, index) => (
               <div key={index} className="bg-slate-50 rounded-xl p-6 lg:p-8">
@@ -362,13 +357,15 @@ function App() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button
-                onClick={handleResumeClick}
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3"
               >
                 <Download size={20} className="group-hover:animate-bounce" />
                 View Resume
-              </button>
+              </a>
               <div className="text-slate-500 text-sm">
                 <span className="hidden sm:inline">•</span>
                 <span className="sm:ml-2">Updated August 2025</span>
@@ -394,17 +391,17 @@ function App() {
           </div>
           
           <div className="flex justify-center items-center gap-8 mb-12">
-           <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=utkarsha.v.salve@gmail.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="group flex flex-col items-center p-6 bg-slate-700 rounded-xl hover:bg-slate-600 transition-all duration-300 hover:scale-110 hover:shadow-2xl min-w-[120px]"
->
-  <div className="w-12 h-12 mb-3 bg-red-500 rounded-full flex items-center justify-center group-hover:bg-red-400 transition-colors duration-300">
-    <Mail size={20} className="text-white" />
-  </div>
-  <h3 className="text-sm font-semibold text-white group-hover:text-red-300 transition-colors duration-300">Gmail</h3>
-</a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=utkarsha.v.salve@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center p-6 bg-slate-700 rounded-xl hover:bg-slate-600 transition-all duration-300 hover:scale-110 hover:shadow-2xl min-w-[120px]"
+            >
+              <div className="w-12 h-12 mb-3 bg-red-500 rounded-full flex items-center justify-center group-hover:bg-red-400 transition-colors duration-300">
+                <Mail size={20} className="text-white" />
+              </div>
+              <h3 className="text-sm font-semibold text-white group-hover:text-red-300 transition-colors duration-300">Gmail</h3>
+            </a>
             
             <a 
               href="https://www.linkedin.com/in/utkarsha-salve-253b95259/" 
@@ -429,23 +426,6 @@ function App() {
               </div>
               <h3 className="text-sm font-semibold text-white group-hover:text-gray-300 transition-colors duration-300">GitHub</h3>
             </a>
-          </div>
-          
-          <div className="text-center">
-            <div className="inline-flex items-center gap-4 bg-slate-700 px-6 py-3 rounded-full">
-              <span className="text-slate-300 text-sm">Connect with me:</span>
-              <div className="flex gap-3">
-                <a href="mailto:utkarsha.v.salve@gmail.com" className="text-slate-400 hover:text-red-400 transition-colors duration-200">
-                  <Mail size={18} />
-                </a>
-                <a href="https://www.linkedin.com/in/utkarsha-salve-253b95259/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">
-                  <Linkedin size={18} />
-                </a>
-                <a href="https://github.com/CodeWithUtkarsha" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-gray-300 transition-colors duration-200">
-                  <Github size={18} />
-                </a>
-              </div>
-            </div>
           </div>
           
           <div className="text-center mt-12">
