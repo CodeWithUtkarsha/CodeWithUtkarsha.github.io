@@ -431,9 +431,16 @@ function App() {
           </div>
           
           <div className="text-center mt-12">
-            <p className="text-slate-400">
-              © 2025 Utkarsha Salve. Built with React and Tailwind CSS.
-            </p>
+            
+
+
+            <p class="copyright">
+            <span class="graduation-cap">🎓</span>
+            © 2022-2026 Utkarsha Salve | 
+            <span class="university">B.Tech CSBS @ GITAM University</span>
+        </p>
+        
+            
           </div>
         </div>
       </section>
