@@ -357,15 +357,17 @@ function App() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3"
-              >
-                <Download size={20} className="group-hover:animate-bounce" />
-                View Resume
-              </a>
+             <a
+  href="/resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3"
+>
+  <Download size={20} className="group-hover:animate-bounce" />
+  View Resume
+</a>
+
+
               <div className="text-slate-500 text-sm">
                 <span className="hidden sm:inline">•</span>
                 <span className="sm:ml-2">Updated August 2025</span>
