@@ -172,7 +172,7 @@ function App() {
                 title: "TradeTrack - Trading Journal UI",
                 description: "A performance-driven React UI inspired by TradeZella, designed to log trades, visualize analytics like P&L and win rates, and track trading strategy effectiveness with clean, modular components.",
                 tech: ["MERN Stack","HTML","CSS","JAVASCRIPT"],
-                github: "https://github.com/CodeWithUtkarsha/TradeTrack",
+                github: "https://github.com/CodeWithUtkarsha/TradeTrack.git",
                 demo: "#"
               },
               {
