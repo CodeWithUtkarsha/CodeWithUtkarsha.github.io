@@ -165,8 +165,8 @@ function App() {
                 title: "Campus Resolve Portal (CRP)",
                 description: "AI-powered grievance redressal platform built with MERN stack. Enables students to submit complaints via text, voice, or video with real-time tracking and AI-driven spam filtering.",
                 tech: ["MERN Stack","HTML","CSS","JAVASCRIPT"],
-                github: "https://github.com/CodeWithUtkarsha/Campus-Resolve-Portal-CRP-.git",
-                demo: "https://campus-resolve-portal-af34wp151-newp.vercel.app/"
+                github: "https://github.com/CodeWithUtkarsha/Campus-Resolve-Portal-CRP.git",
+                demo: "https://campus-resolve-portal-36qk274er-newp.vercel.app"
               },
               {
                 title: "TradeTrack - Trading Journal UI",
@@ -180,7 +180,7 @@ function App() {
                 description: "A frontend web application for online movie ticket booking with real-time seat selection, payment interface mockup, and user-friendly navigation.",
                 tech: ["HTML", "CSS", "JavaScript"],
                 github: "https://github.com/CodeWithUtkarsha/BINGE-IT",
-                demo: "https://campus-resolve-portal-af34wp151-newp.vercel.app"
+                demo: "https://binge-c9s1rcvdp-newp.vercel.app"
               }
 
             ].map((project, index) => (
