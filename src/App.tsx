@@ -166,7 +166,7 @@ function App() {
                 description: "AI-powered grievance redressal platform built with MERN stack. Enables students to submit complaints via text, voice, or video with real-time tracking and AI-driven spam filtering.",
                 tech: ["MERN Stack","HTML","CSS","JAVASCRIPT"],
                 github: "https://github.com/CodeWithUtkarsha/Campus-Resolve-Portal-CRP.git",
-                demo: "https://campus-resolve-portal-crp.vercel.app/"
+                demo: "https://campus-resolve-portal-crp.vercel.app"
               {
                 title: "TradeTrack - Trading Journal UI",
                 description: "A performance-driven React UI inspired by TradeZella, designed to log trades, visualize analytics like P&L and win rates, and track trading strategy effectiveness with clean, modular components.",
