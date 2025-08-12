@@ -167,6 +167,7 @@ function App() {
                 tech: ["MERN Stack","HTML","CSS","JAVASCRIPT"],
                 github: "https://github.com/CodeWithUtkarsha/Campus-Resolve-Portal-CRP.git",
                 demo: "https://campus-resolve-portal-crp.vercel.app/"
+              },
               {
                 title: "TradeTrack - Trading Journal UI",
                 description: "A performance-driven React UI inspired by TradeZella, designed to log trades, visualize analytics like P&L and win rates, and track trading strategy effectiveness with clean, modular components.",
