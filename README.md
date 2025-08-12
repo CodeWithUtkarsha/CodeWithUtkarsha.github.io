@@ -1,8 +1,8 @@
-# Utkarsha Salve – Personal Portfolio
+# Utkarsha Salve – Personal Portfolio👩🏻‍💼
 
 Welcome to my personal portfolio website! Explore my projects, skills, and professional experience.
 
-[🔗 Live Website](https://bolty-)
+[🔗 Live Website](https://bolty-git-main-newp.vercel.app/)
 
 ---
 
@@ -35,8 +35,8 @@ npm run dev
 
 ## 📫 Contact
 
-Feel free to connect with me on [LinkedIn](http://www.linkedin.com/in/utkarsha-salve-253b95259/) 
-or reach out via [email](mailto:utkarsha.v.salve@gmail.com).
+-Feel free to connect with me on [LinkedIn](http://www.linkedin.com/in/utkarsha-salve-253b95259/)
+-Reach out via [email](mailto:utkarsha.v.salve@gmail.com).
 
 ---
 
