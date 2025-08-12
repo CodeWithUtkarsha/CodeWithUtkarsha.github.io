@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website! Explore my projects, skills, and professional experience.
 
-[🔗 Live Website](https://bolty-git-main-newp.vercel.app/)
+[🔗 Live Website](https://personal-portfolio-8onfd0jq6-newp.vercel.app)
 
 ---
 
