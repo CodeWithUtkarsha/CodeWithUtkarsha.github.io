@@ -1,18 +1,43 @@
-# Utkarsha Salve – Portfolio
+# Utkarsha Salve – Personal Portfolio
 
-This is my personal portfolio website showcasing my projects, skills, and experience.
+Welcome to my personal portfolio website! Explore my projects, skills, and professional experience.
 
-🔗 Live: (https://bolty-git-main-newp.vercel.app/)  
-🎯 Built with: Vite + React + TypeScript + TailwindCSS  
-📦 Deployed on: Vercel
+[🔗 Live Website](https://bolty-)
 
-## 🛠 Features
+---
 
-- Responsive design  
-- Project showcase  
-- Resume download  
+## 🚀 Tech Stack
 
-## 🚀 Setup
+- **Frontend:** React, TypeScript, Vite
+- **Styling:** TailwindCSS
+- **Deployment:** Vercel
+
+---
+
+## ✨ Features
+
+- Fully responsive design for all devices
+- Interactive project showcase
+- Downloadable resume
+
+---
+
+## 🛠️ Getting Started
+
+To run locally:
+
 ```bash
 npm install
 npm run dev
+```
+
+---
+
+## 📫 Contact
+
+Feel free to connect with me on [LinkedIn](http://www.linkedin.com/in/utkarsha-salve-253b95259/) 
+or reach out via [email](mailto:utkarsha.v.salve@gmail.com).
+
+---
+
+Thank you for visiting! ☺️
