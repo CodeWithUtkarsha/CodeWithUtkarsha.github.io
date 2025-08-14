@@ -1,4 +1,4 @@
-# Utkarsha Salve – Personal Portfolio👩🏻‍💼
+# Utkarsha Salve – Personal Portfolio👩
 
 Welcome to my personal portfolio website! Explore my projects, skills, and professional experience.
 
