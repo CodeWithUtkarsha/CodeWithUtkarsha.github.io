@@ -181,7 +181,15 @@ function App() {
                 tech: ["HTML", "CSS", "JavaScript"],
                 github: "https://github.com/CodeWithUtkarsha/BINGE-IT",
                 demo: "https://binge-c9s1rcvdp-newp.vercel.app"
-              }
+              },
+      {
+  title: "BizDash - Business Analytics Dashboard",
+  description: "A modern, responsive business analytics dashboard built with React, TypeScript, and Tailwind CSS. Features real-time KPI tracking, interactive visualizations, role-based user management, notifications, and comprehensive reporting with export and trend insights.",
+  tech: ["React", "TypeScript", "Tailwind CSS"],
+  github: "https://github.com/CodeWithUtkarsha/BizDash.git",
+  demo: "https://biz-dash.vercel.app/"
+}
+
 
             ].map((project, index) => (
               <div key={index} className="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
@@ -437,7 +445,7 @@ function App() {
             <p class="copyright">
             <span class="graduation-cap">🎓</span>
             © 2022-2026 Utkarsha Salve | 
-            <span class="university">B.Tech CSBS @ GITAM University</span>
+            <span class="university"> B.Tech CSBS @ GITAM University</span>
         </p>
         
             
